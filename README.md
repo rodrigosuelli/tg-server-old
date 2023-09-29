@@ -19,6 +19,8 @@ CREATE ROLE root superuser;
 ALTER ROLE root WITH LOGIN;
 ```
 
+run npm run build to fix "self connect errors"
+
 Rode os seguintes comandos através do psql para criar ao banco de dados
 
 ```sql
