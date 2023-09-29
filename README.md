@@ -14,6 +14,9 @@ Access psql inside github codespaces
 
 ```bash
 psql -h localhost -U postgres postgres
+
+CREATE ROLE root superuser;
+ALTER ROLE root WITH LOGIN;
 ```
 
 Rode os seguintes comandos através do psql para criar ao banco de dados
@@ -75,7 +78,7 @@ cp .env.example .env
 
 No arquivo .env insira sua senha de usuário do postgres na variável `PGPASSWORD` e verifique se as outras variáveis de ambiente estão de acordo com o seu banco de dados.
 
-Finalmente, com todas as dependências instaladas, o banco de dados criado e rodando na porta padrão(5432) e as variáveis de ambiente configuradas, você já pode executar o servidor no modo de desenvolvimento na porta(3333):
+Finalmente, com todas as dependências instaladas, o banco de dados criado e rodando na porta padrão(5432) e as variáveis de ambiente configuradas, você já pode executar o servidor no modo de desenvolvimento na porta(1337):
 
 ```bash
 # Rodar o projeto
